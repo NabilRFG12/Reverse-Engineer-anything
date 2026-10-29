@@ -243,7 +243,14 @@ export const providerCatalog = (sources) => {
       contracts: sources.applicationContracts.APPLICATION_TOOL_CONTRACTS.filter(
         ({ name }) =>
           name !== "project_android_application_graph" &&
-          name !== "project_apple_application_graph",
+          name !== "project_apple_application_graph" &&
+          name !== "inspect_game_project",
+      ),
+    },
+    {
+      identity: sources.gameProject.GAME_PROJECT_PROVIDER,
+      contracts: sources.applicationContracts.APPLICATION_TOOL_CONTRACTS.filter(
+        ({ name }) => name === "inspect_game_project",
       ),
     },
     {

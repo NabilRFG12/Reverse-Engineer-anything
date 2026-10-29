@@ -146,6 +146,8 @@ REA wymaga Node.js 22.x (>=22.19), 24.x (>=24.11) lub 26+ oraz npm. Dodatkowe na
 | Pakiety i zasoby                        | Spisy plików, skróty, pliki plist, struktura pakietów Apple i wyodrębnione zasoby                                     | [Przewodnik artefaktów i JavaScript](docs/javascript-artifact-reconstruction.md), [aplikacje Apple](docs/apple-application-analysis.md) |
 | Zachowanie procesów                     | Wyjście terminala, interakcje, obserwacje zakończenia i systemu plików oraz porównania uruchomień                     | Linux/macOS z natywnym PTY; [przechwytywanie procesów](docs/process-capture.md)                                                         |
 
+[Odtwarzanie gier Unity](docs/game-reversing.md): lokalna inspekcja metadanych/GUID, scen i potencjalnych atrap C#; dostępna po zbudowaniu tego forka.
+
 Statyczna analiza JavaScript i .NET odczytuje dostarczone pliki bez uruchamiania aplikacji. Przechwytywanie w czasie wykonywania uruchamia wybrany cel lub wchodzi z nim w interakcje z uprawnieniami Twojego użytkownika; skutki opisano w odpowiednich przewodnikach.
 
 <a id="choosing-a-deep-analysis-provider"></a>

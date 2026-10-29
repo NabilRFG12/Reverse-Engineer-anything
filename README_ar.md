@@ -146,6 +146,8 @@ npx rea-agents@latest setup
 | الحزم والموارد                  | قوائم الملفات، والبصمات، وملفات plist، وبنية حزم Apple، والموارد المستخرجة                                 | [دليل تحليل الملفات وJavaScript](docs/javascript-artifact-reconstruction.md)، [تطبيقات Apple](docs/apple-application-analysis.md) |
 | سلوك العمليات                   | مخرجات الطرفية، والتفاعلات، وملاحظات الخروج ونظام الملفات، ومقارنات التشغيل                                  | Linux/macOS مع PTY أصلي؛ [تسجيل سلوك العمليات](docs/process-capture.md)                                                           |
 
+[فحص ألعاب Unity](docs/game-reversing.md): فحص محلي للبيانات الوصفية وGUID والمشاهد ودوال C# المحتمل أن تكون هياكل فارغة؛ متاح في هذا الفرع بعد البناء.
+
 يقرأ الفحص الثابت لـ JavaScript و.NET الملفات المقدّمة دون تشغيل التطبيق. يشغّل التسجيل أثناء التنفيذ الهدف المحدد أو يتفاعل معه بصلاحيات مستخدمك؛ ويشرح كل دليل للتسجيل أثناء التنفيذ آثاره.
 
 <a id="choosing-a-deep-analysis-provider"></a>

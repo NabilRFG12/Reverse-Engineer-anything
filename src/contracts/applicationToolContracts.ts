@@ -1,4 +1,8 @@
 import { applicationVersionComparisonResultSchema } from "../domain/javascript/javascriptApplicationVersionComparisonSchemas.js";
+import {
+  gameProjectInputSchema,
+  gameProjectReportSchema,
+} from "../domain/gameProject.js";
 import { applicationFeatureTraceResultSchema } from "../domain/javascript/javascriptFeatureTraceSchemas.js";
 import { javaScriptSemanticTraceResultSchema } from "../domain/javascript/javascriptSemanticTraceSchemas.js";
 import { javaScriptExportShapeComparisonResultSchema } from "../domain/javascript/javascriptExportShapeComparisonSchemas.js";
@@ -295,6 +299,21 @@ export const APPLICATION_TOOL_CONTRACTS = [
       },
     ],
   },
+  {
+    name: "inspect_game_project",
+    ...toolContractMetadata("inspect_game_project"),
+    description:
+      "Inspect an explicit local game project without running its editor or changing assets. Initial profile: Unity Assets/ProjectSettings. Returns exact case-collision groups, duplicate/invalid/missing meta facts, serialized build-scene paths and unresolved Assets-index script GUIDs, plus located C# stub/lifecycle candidates as heuristic inferences. Includes inspected-text SHA-256 identities, coverage and every skipped path. Defaults bound traversal to 100000 entries, retained/read selected text to 64 MiB and each file to 8 MiB; caller may change these budgets. Does not recover native method bodies, resolve Packages/binary serialization, compile or establish playability.",
+    kind: "application",
+    inputSchema: gameProjectInputSchema,
+    outputSchema: evidenceResultOf(gameProjectReportSchema),
+    examples: [
+      {
+        title: "Inspect a Unity project exported from game artifacts",
+        input: { path: "/artifacts/RecoveredGame" },
+      },
+    ],
+  },
 ] as const satisfies readonly ToolContract[];
 
 /** Resolve one named application contract without relying on array position. */
@@ -325,6 +344,12 @@ export function applicationToolContract(
 export function applicationToolContract(
   name: "project_apple_application_graph",
 ): (typeof APPLICATION_TOOL_CONTRACTS)[8];
+export function applicationToolContract(
+  name: "inspect_game_project",
+): Extract<
+  (typeof APPLICATION_TOOL_CONTRACTS)[number],
+  { readonly name: "inspect_game_project" }
+>;
 export function applicationToolContract(
   name: (typeof APPLICATION_TOOL_CONTRACTS)[number]["name"],
 ): (typeof APPLICATION_TOOL_CONTRACTS)[number] {

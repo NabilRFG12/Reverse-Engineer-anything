@@ -146,6 +146,8 @@ REA 需要 Node.js 22.x（>=22.19）、24.x（>=24.11）或 26+，以及 npm。�
 | 软件包与资源          | 文件清单、摘要、plist、Apple bundle 结构和提取的资源          | [制品与 JavaScript 指南](docs/javascript-artifact-reconstruction.md)、[Apple 应用](docs/apple-application-analysis.md) |
 | 进程行为              | 终端输出、交互、退出和文件系统观察结果，以及运行对比          | 支持原生 PTY 的 Linux/macOS；[进程捕获](docs/process-capture.md)                                                       |
 
+[Unity 游戏还原](docs/game-reversing.md)：在本机检查 meta/GUID、场景与可能的 C# 空壳方法；构建此 fork 后即可使用。
+
 静态 JavaScript 和 .NET 检查读取提供的文件，不运行应用。运行时捕获会以你的用户权限运行目标或与之交互；各运行时指南说明了具体影响。
 
 <a id="choosing-a-deep-analysis-provider"></a>

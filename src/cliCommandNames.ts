@@ -93,6 +93,7 @@ export const CLI_COMMANDS = Object.freeze({
   buildReconstructionObligationLedger: "build-reconstruction-obligation-ledger",
   evaluateReconstructionCoverage: "evaluate-reconstruction-coverage",
   projectAndroidApplicationGraph: "project-android-application-graph",
+  inspectGameProject: "inspect-game-project",
   projectAppleApplicationGraph: "project-apple-application-graph",
 });
 

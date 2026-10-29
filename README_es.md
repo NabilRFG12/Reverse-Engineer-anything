@@ -146,6 +146,8 @@ REA requiere Node.js 22.x (>=22.19), 24.x (>=24.11) o 26+, además de npm. Las h
 | Paquetes y recursos         | Inventarios de archivos, resúmenes criptográficos, plists, estructura de paquetes de Apple y recursos extraídos                | [Guía de artefactos y JavaScript](docs/javascript-artifact-reconstruction.md), [aplicaciones de Apple](docs/apple-application-analysis.md) |
 | Comportamiento de procesos  | Salida de la terminal, interacciones, observaciones de salida y del sistema de archivos, y comparaciones entre ejecuciones     | Linux/macOS con una PTY nativa; [captura de procesos](docs/process-capture.md)                                                             |
 
+[Recuperación de juegos Unity](docs/game-reversing.md): inspección local de metadatos/GUID, escenas y posibles stubs C#; disponible en este fork tras compilar.
+
 La inspección estática de JavaScript y .NET lee los archivos suministrados sin ejecutar la aplicación. La captura en ejecución inicia el objetivo seleccionado o interactúa con él con los permisos de tu usuario; cada guía describe sus efectos.
 
 <a id="choosing-a-deep-analysis-provider"></a>

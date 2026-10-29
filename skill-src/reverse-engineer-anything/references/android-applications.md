@@ -1,5 +1,9 @@
 # Android application artifacts
 
+For Unity APKs, Java/Kotlin inspection does not recover IL2CPP gameplay. See
+[game recovery](game-recovery.md) for split APK evidence, native address mapping,
+exported-project inspection and the distinction between metadata stubs and logic.
+
 Use the connected server's advertised Android tools. Repository main and npm
 4.1.0 include this family. A skill installation alone cannot add it to an
 older server.

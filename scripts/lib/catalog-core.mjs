@@ -74,6 +74,7 @@ const SOURCE_PATHS = {
   idaProvider: "dist/ida/IdaProviderCapabilities.js",
   nativeProvider: "dist/native/NativeMacOSProviderMetadata.js",
   artifactProviders: "dist/application/InvestigationProviders.js",
+  gameProject: "dist/domain/gameProject.js",
   browserProvider: "dist/browser/CdpBrowserProvider.js",
   browserScenarioProvider: "dist/browser/PlaywrightBrowserScenarioProvider.js",
   electronProvider: "dist/browser/CdpElectronProvider.js",

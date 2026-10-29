@@ -1,4 +1,5 @@
 import { registerEvmCommands } from "./cli/evmCommands.js";
+import { registerGameProjectCommands } from "./cli/gameProjectCommands.js";
 import { registerBinaryDiagnosticsCommands } from "./cli/binaryDiagnosticsCommands.js";
 import { Cli } from "incur";
 
@@ -62,6 +63,7 @@ export const createCli = (
   registerArtifactCommands(cli, logger);
   registerManagedCommands(cli, logger);
   registerAndroidCommands(cli, logger, environment);
+  registerGameProjectCommands(cli, logger);
   registerFirmwareCommands(cli, logger, environment);
   registerBinaryDiagnosticsCommands(cli, logger, environment);
   registerEvidenceCommands(cli, logger);

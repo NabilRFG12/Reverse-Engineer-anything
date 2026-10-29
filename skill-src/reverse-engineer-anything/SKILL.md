@@ -2,7 +2,7 @@
 name: reverse-engineer-anything
 description: Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA. Use shipped-artifact or requested runtime evidence to explain features, compare versions, decompile code, or guide a reconstruction. Skip REA for ordinary source-repository architecture analysis.
 metadata:
-  version: "33"
+  version: "34"
 ---
 
 # REA
@@ -85,6 +85,11 @@ explicit path or endpoint and do not need it.
   `inspect_android_package`, then focused Android tools when advertised.
   Archive member inventory still uses the archive route above.
 - Managed PE/CLI assembly: `inspect_managed_artifact`.
+- Recovered Unity project with missing gameplay or import problems:
+  `inspect_game_project` when advertised. Review observed meta/GUID/scene facts
+  separately from inferred stub/lifecycle candidates; static inspection cannot
+  establish playability. For APK/IL2CPP recovery, read
+  [game recovery](references/game-recovery.md) before selecting native tools.
 - Firmware image: `inspect_firmware_regions` when advertised. Use
   `extract_firmware` when extraction is requested, with a caller-selected new
   absolute output directory. These tools use caller-supplied Binwalk/Unblob on

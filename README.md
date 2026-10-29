@@ -46,6 +46,11 @@
 
 </div>
 
+> **Reverse-game fork:** this branch adds tooling for Unity game recovery. After
+> building, run `node scripts/rea.mjs inspect-game-project /absolute/path/RecoveredGame --json`
+> to inspect asset metadata, build scenes and candidate C# stubs. The game reversing
+> guide below describes native-to-C# recovery and its verification boundaries.
+
 ---
 
 See a feature in an app that you want in your own product? Ask your agent to investigate it with REA. It can inspect the app without its source code, explain how the feature works, show the evidence, and build a version for your project.
@@ -158,6 +163,7 @@ Additional tools and host support depend on the target:
 | Saved network captures | Requests, responses, exposed payloads and source locations                           | HAR; mitmdump on Linux for native mitmproxy captures; [capture guide](docs/web-network-captures.md)                                   |
 | .NET assemblies        | Metadata, CIL instructions, declared native dependencies and build comparisons       | Static inspection; [managed-code guide](docs/managed-code-analysis.md)                                                                |
 | Android APKs           | Manifest declarations, classes, decompiled methods and references                    | Headless JADX and a full JDK on Linux/macOS; [Android guide](docs/android-analysis.md)                                                |
+| Recovered Unity games  | Meta/GUID and scene-path observations, located C# stub and lifecycle candidates      | Read-only local inspection; [game reversing guide](docs/game-reversing.md), available in this fork after building                     |
 | Firmware               | Regions, extraction results and native-analysis handoffs                             | Binwalk / Unblob on Linux; [firmware guide](docs/firmware-analysis.md)                                                                |
 | Packages and resources | File inventories, digests, plists, Apple bundle anatomy and extracted resources      | [Artifact and JavaScript guide](docs/javascript-artifact-reconstruction.md), [Apple applications](docs/apple-application-analysis.md) |
 | Process behavior       | Terminal output, interactions, exit and filesystem observations, and run comparisons | Linux/macOS with a native PTY; [process capture](docs/process-capture.md)                                                             |

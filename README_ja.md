@@ -146,6 +146,8 @@ REA には Node.js 22.x（>=22.19）、24.x（>=24.11）、または 26+ と npm
 | パッケージとリソース             | ファイル一覧、ダイジェスト、plist、Apple バンドルの構造、抽出されたリソース            | [アーティファクトと JavaScript のガイド](docs/javascript-artifact-reconstruction.md)、[Apple アプリケーション](docs/apple-application-analysis.md) |
 | プロセスの動作                   | ターミナル出力、対話、終了とファイルシステムの観測結果、実行の比較                     | ネイティブ PTY を備えた Linux/macOS；[プロセスキャプチャ](docs/process-capture.md)                                                                 |
 
+[Unity ゲームの復元](docs/game-reversing.md): メタデータ・GUID、シーン、C# スタブ候補をローカルで検査します。このフォークをビルドすると利用できます。
+
 静的な JavaScript と .NET の検査は、指定されたファイルを読み取り、アプリケーションを実行しません。実行時キャプチャは、あなたのユーザー権限で対象を実行したり、対象とやり取りしたりします。それぞれの実行時ガイドに、どのような操作が行われるかを記載しています。
 
 <a id="choosing-a-deep-analysis-provider"></a>

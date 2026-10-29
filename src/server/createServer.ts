@@ -1,4 +1,6 @@
 import type { EvmInterfaceService } from "../application/evm/EvmInterfaceService.js";
+import { createGameProjectInspectionService } from "../composition/gameProject.js";
+import { registerGameProjectTools } from "./registerGameProjectTools.js";
 import { createEvmInterfaceService } from "../composition/evm.js";
 import { registerEvmTools } from "./registerEvmTools.js";
 import { registerRecordedCrashTools } from "./registerRecordedCrashTools.js";
@@ -212,6 +214,12 @@ export const createServer = (
   registerAndroidTools(
     server,
     new AndroidAnalysisService(android),
+    toolLogger,
+    recordEvidence,
+  );
+  registerGameProjectTools(
+    server,
+    createGameProjectInspectionService(),
     toolLogger,
     recordEvidence,
   );

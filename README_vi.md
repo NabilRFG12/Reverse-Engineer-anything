@@ -46,6 +46,11 @@
 
 </div>
 
+> **Fork Reverse-game:** nhánh này bổ sung công cụ phục vụ reverse game Unity.
+> Sau khi build, chạy `node scripts/rea.mjs inspect-game-project /duong/dan/project --json`
+> để kiểm tra metadata asset, scene và các hàm C# có dấu hiệu stub. Hướng dẫn reverse
+> game bên dưới mô tả cách phục hồi logic native sang C# và phạm vi cần kiểm chứng.
+
 ---
 
 Bạn thấy một tính năng trong ứng dụng và muốn đưa nó vào sản phẩm của mình? Hãy nhờ tác nhân của bạn điều tra bằng REA. Tác nhân có thể kiểm tra ứng dụng mà không cần mã nguồn, giải thích cách tính năng hoạt động, đưa ra bằng chứng và xây dựng một phiên bản cho dự án của bạn.
@@ -145,6 +150,8 @@ REA yêu cầu Node.js 22.x (>=22.19), 24.x (>=24.11) hoặc 26+, cùng với np
 | Phần sụn                      | Các vùng, kết quả trích xuất và dữ liệu chuyển sang phân tích mã máy                                            | Binwalk / Unblob trên Linux; [hướng dẫn phần sụn](docs/firmware-analysis.md)                                                                  |
 | Gói và tài nguyên             | Danh sách tệp, giá trị băm, plist, cấu trúc bundle Apple và tài nguyên được trích xuất                          | [Hướng dẫn hiện vật phần mềm và JavaScript](docs/javascript-artifact-reconstruction.md), [ứng dụng Apple](docs/apple-application-analysis.md) |
 | Hành vi tiến trình            | Đầu ra terminal, tương tác, quan sát khi thoát và hệ thống tệp, cùng so sánh các lần chạy                       | Linux/macOS có PTY gốc; [ghi lại tiến trình](docs/process-capture.md)                                                                         |
+
+[Reverse game Unity](docs/game-reversing.md): kiểm tra cục bộ .meta/GUID, scene và các hàm C# có dấu hiệu stub; khả dụng sau khi build fork này.
 
 Kiểm tra tĩnh JavaScript và .NET đọc các tệp được cung cấp mà không chạy ứng dụng. Ghi lại khi chạy sẽ khởi chạy hoặc tương tác với mục tiêu đã chọn bằng quyền người dùng của bạn; từng hướng dẫn mô tả tác động của nó.
 
